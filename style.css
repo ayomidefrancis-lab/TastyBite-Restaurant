@@ -1,0 +1,513 @@
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #292929;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo,
+footer h2 {
+    font-size: 28px;
+    color: #222222;
+}
+
+.logo span,
+footer h2 span {
+    color: #f15a24;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f15a24;
+}
+
+.nav-button,
+.main-button {
+    display: inline-block;
+    background-color: #f15a24;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.main-button:hover {
+    background-color: #cf4212;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.35)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #f15a24;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #ff7848;
+}
+
+.hero-content>p:not(.small-title) {
+    font-size: 17px;
+    max-width: 520px;
+    margin-bottom: 28px;
+    color: #eeeeee;
+}
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 45px 8%;
+    background-color: #fff8f4;
+}
+
+.feature {
+    text-align: center;
+    padding: 15px;
+}
+
+.feature span {
+    font-size: 35px;
+}
+
+.feature h3 {
+    margin: 8px 0;
+    color: #292929;
+}
+
+.feature p {
+    color: #666666;
+    font-size: 14px;
+}
+
+/* Section Headings */
+.menu-section,
+.contact-section {
+    padding: 75px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading>p {
+    color: #f15a24;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: clamp(25px, 4vw, 36px);
+    margin: 8px 0;
+}
+
+.section-heading>span {
+    color: #777777;
+}
+
+/* Food Menu */
+.food-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.food-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.09);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.food-info {
+    padding: 22px;
+}
+
+.food-info h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.food-info p {
+    color: #707070;
+    font-size: 14px;
+    min-height: 45px;
+}
+
+.food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.price {
+    color: #f15a24;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.order-button {
+    background-color: #292929;
+    color: #ffffff;
+    padding: 9px 17px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #f15a24;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff8f4;
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-content h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.about-content>p:not(.small-title) {
+    color: #666666;
+    margin-bottom: 17px;
+}
+
+.about-content .main-button {
+    margin-top: 10px;
+}
+
+/* Contact Section */
+.contact-container {
+    max-width: 1100px;
+    margin: auto auto 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 30px 15px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.contact-card span {
+    font-size: 32px;
+}
+
+.contact-card h3 {
+    margin: 10px 0;
+}
+
+.contact-card p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.whatsapp-button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 14px 25px;
+    background-color: #168b49;
+    color: #ffffff;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #106b37;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #222222;
+    color: #eeeeee;
+    padding: 35px 15px;
+}
+
+footer h2 {
+    color: #ffffff;
+}
+
+footer>p {
+    margin-top: 8px;
+    color: #cccccc;
+}
+
+footer .copyright {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+/* Tablet Screens */
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .food-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-section {
+        gap: 30px;
+    }
+
+    .about-image img {
+        height: 330px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+    .navbar {
+        justify-content: center;
+        padding: 15px 4%;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-button {
+        padding: 9px 15px;
+    }
+
+    .hero {
+        min-height: 470px;
+        padding: 55px 7%;
+    }
+
+    .hero h2 {
+        font-size: 39px;
+    }
+
+    .hero-content>p:not(.small-title) {
+        font-size: 15px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 30px 7%;
+    }
+
+    .menu-section,
+    .contact-section {
+        padding: 55px 5%;
+    }
+
+    .food-container {
+        grid-template-columns: 1fr;
+    }
+
+    .food-card img {
+        height: 230px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+```css
+/* Smooth animations for TastyBite */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animate the hero content */
+.hero-content {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animate the food cards */
+.food-card {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Smooth hover effects */
+.feature,
+.contact-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover,
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve button interactions */
+.main-button,
+.nav-button,
+.order-button,
+.whatsapp-button {
+    transition: all 0.3s ease;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
